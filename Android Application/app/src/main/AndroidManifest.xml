@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--
+ Required only if your app needs to access images or photos
+     that other apps created.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!--
+ Required only if your app needs to access videos
+         that other apps created.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.chaquo.python.android.PyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="SLIEA"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Test000"
+        tools:targetApi="31">
+        <activity
+            android:name=".OnBoardingSub2"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingSub1"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingMain"
+            android:exported="false" />
+        <activity
+            android:name=".Image2Text"
+            android:exported="true" />
+        <activity
+            android:name=".TextVoice2SL"
+            android:exported="false" />
+        <activity
+            android:name=".Video2Text"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.provider2"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths2" />
+        </provider>
+    </application>
+
+</manifest>

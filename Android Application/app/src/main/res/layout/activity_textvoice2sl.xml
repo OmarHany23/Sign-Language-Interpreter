@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextVoice2SL">
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:background="#eeee"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/gesture_simulator"
+        android:textAlignment="viewStart"
+        android:textColor="#939292"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+
+    <VideoView
+        android:id="@+id/graphic_videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="480dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languagesMenu" />
+
+
+    <ImageButton
+        android:id="@+id/replayButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-110dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle_button_background"
+        android:contentDescription="@string/replay"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/ic_baseline_replay_24"
+        app:layout_constraintBottom_toTopOf="@+id/micButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graphic_videoView" />
+
+    <Button
+        android:id="@+id/trans_button"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_background"
+        android:elevation="2dp"
+        android:src="@drawable/baseline_translate_24"
+        android:text="@string/translate"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/trans_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:autoLink="web|phone|email"
+        android:background="@drawable/bg_edittext"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/type_to_translate"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/trans_button"
+        app:layout_constraintEnd_toStartOf="@+id/micButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/micButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle_button_background"
+        android:contentDescription="@string/recoder"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/ic_baseline_mic_none_24"
+        app:layout_constraintBottom_toTopOf="@+id/trans_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/languagesMenu"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/circle_button_background"
+        android:contentDescription="@string/languages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/language_newsize_foreground" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_background"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="selected"
+        app:itemBackground="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

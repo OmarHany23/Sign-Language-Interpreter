@@ -1,0 +1,131 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    namespace 'com.example.test000'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.test000"
+        sourceSets {
+            main{
+                python.srcDir "src/main/python"
+            }
+        }
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+        python {
+            version "3.10"
+            pip {
+                install "requests"
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation "com.tbuonomo:dotsindicator:4.3"
+
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    // ViewModel utilities for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    // Lifecycle utilities for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+
+    // Saved state module for ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1")
+
+    // Annotation processor
+
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.6.1")
+
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation("androidx.lifecycle:lifecycle-service:2.6.1")
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation("androidx.lifecycle:lifecycle-process:2.6.1")
+
+    // optional - ReactiveStreams support for LiveData
+    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.6.1")
+
+    // optional - Test helpers for LiveData
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+    // optional - Test helpers for Lifecycle runtime
+    testImplementation ("androidx.lifecycle:lifecycle-runtime-testing:2.6.1")
+
+
+    // CameraX core library using the camera2 implementation
+
+    // The following line is optional, as the core library is included indirectly by camera-camera2
+    implementation("androidx.camera:camera-core:1.3.0-alpha07")
+    // If you want to additionally use the CameraX Lifecycle library
+    implementation("androidx.camera:camera-lifecycle:1.3.0-alpha07")
+    // If you want to additionally use the CameraX VideoCapture library
+    implementation("androidx.camera:camera-video:1.3.0-alpha07")
+    // If you want to additionally use the CameraX View class
+    implementation("androidx.camera:camera-view:1.3.0-alpha07")
+    // If you want to additionally add CameraX ML Kit Vision Integration
+    implementation("androidx.camera:camera-mlkit-vision:1.3.0-alpha07")
+    // If you want to additionally use the CameraX Extensions library
+    implementation("androidx.camera:camera-extensions:1.3.0-alpha07")
+    debugImplementation "androidx.compose.ui:ui-tooling:1.4.3"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.4.3"
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+
+
+}

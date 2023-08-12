@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test000</string>
+    <string name="enter_your_message">Enter your message</string>
+    <string name="translate">Translate</string>
+    <string name="home">Home</string>
+    <string name="switch_mode">Switch Mode</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="translation_language">Translation Language</string>
+    <string name="process_type"> Process Type</string>
+    <string name="voice_text_to_sign_language">Voice-Text to Sign Language</string>
+    <string name="sign_language_to_voice_text">Sign Language(Video) to Voice-Text " " Beta " " </string>
+    <string name="sign_language_to_voice_text2">Sign Language(Photos) to Voice-Text </string>
+    <string name="done">Done</string>
+    <string name="translation_of_the_video">Translation of the Video</string>
+    <string name="start_video">Start Video</string>
+    <string name="take_photos">Take Photos</string>
+    <string name="translation_audio">translation audio</string>
+    <string name="open_camera">open camera</string>
+    <string name="open_gallery">open gallery</string>
+    <string name="open_video">open video</string>
+    <string name="recoder">recoder</string>
+    <string name="image_view">Image View</string>
+    <string name="replay">Replay</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="images_view">Images View</string>
+    <string name="translation_of_the_image">Translation of The Image</string>
+    <string name="image_switcher">Image Switcher</string>
+    <string name="translation_of_the_image_s">Translation of The Image(s)</string>
+    <string name="confirm">Confirm</string>
+    <string name="languages">Languages</string>
+    <string name="arabic2">العربية</string>
+    <string name="logo">Logo</string>
+    <string name="signify_page">Signify Page</string>
+    <string name="type_to_translate">Type to Translate</string>
+    <string name="signify">Signify</string>
+    <string name="transign">TranSign</string>
+    <string name="transign_beta">TranSign Beta</string>
+
+
+    <string name="onboarding_slide1_title"> </string>
+    <string name="onboarding_slide1_subtitle">Welcome to our sign language interpreter app! </string>
+    <string name="onboarding_slide1_desc">Our app is designed to help bridge communication gaps between individuals who use sign language and those who do not. </string>
+
+    <string name="onboarding_slide2_title"></string>
+    <string name="onboarding_slide2_subtitle">Choose your language</string>
+    <string name="onboarding_slide2_desc">Whether you speak English OR Arabic language, our app can help you communicate through sign language interpretation and spoken language translation. Choose your preferred language and start exploring our app today!"</string>
+
+    <string name="onboarding_slide3_title"></string>
+    <string name="onboarding_slide3_subtitle">Simplicity of usage</string>
+    <string name="onboarding_slide3_desc">Our app makes translating sign gestures a breeze! Simply hold your phone up and capture the Sign gesture, then press the translate button and choose "switch" to see our anime character bring your words to life."</string>
+
+    <string name="skip">Skip</string>
+    <string name="get_started">Get started</string>
+    <string name="gesture_translator">   Gesture Translator</string>
+    <string name="gesture_simulator">   Gesture Simulator</string>
+</resources>
